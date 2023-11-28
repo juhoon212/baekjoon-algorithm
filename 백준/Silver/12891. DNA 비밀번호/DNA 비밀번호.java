@@ -12,87 +12,110 @@ class Main {
 
     static int[] myArr;
     static int[] checkArr;
-    static int count;
+    static int check;
+
     public static void main(String[] args) throws IOException {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            StringTokenizer st = new StringTokenizer(br.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-            int S = Integer.parseInt(st.nextToken()); // 전체 문자열 길이
-            int P = Integer.parseInt(st.nextToken()); // 비밀번호로 사용할 부분문자열 길이
-            count = 0; // 비밀번호 종류의 수
-            checkArr = new int[4];
-            myArr = new int[4];
-            char A[] = new char[S];
-            int result = 0;
+        int S = Integer.parseInt(st.nextToken());
+        int P = Integer.parseInt(st.nextToken());
+        checkArr = new int[4];
+        myArr = new int[4];
+        check = 0;
+        int result = 0;
 
-            A = br.readLine().toCharArray();
-            st = new StringTokenizer(br.readLine());
+        char[] charArr = br.readLine().toCharArray();
 
-            for (int i = 0; i < 4; i++) {
-                checkArr[i] = Integer.parseInt(st.nextToken());
-                if(checkArr[i] == 0) {
-                    count++;
-                }
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < 4; i++) {
+            checkArr[i] = Integer.parseInt(st.nextToken()); // 들어오는 수 저장
+            if(checkArr[i] == 0) {
+                check++; // 들어오는 수가 0 이면 셀 필요가 없으므로 + 1 을 해준다.
             }
+        }
 
-            for (int i = 0; i < P; i++) {
-                getAdd(A[i]); // 부분문자열 처음 받을떄 세팅
-            }
+        for (int i = 0; i < P; i++) {
+            checkAndAddAlphabet(charArr[i]);
+        }
 
-            if(count == 4) result++;
+        if (check == 4) result++;
 
-            // 슬라이딩윈도우
-            for (int i = P; i < S ; i++) {
-                int j = i - P; // 범위를 유지하면서 이동.
-                getAdd(A[i]);
-                remove(A[j]);
-                if(count == 4) result++;
-            }
+        // 슬라이딩 윈도우(1칸 올려서 카운트)
+        for (int i = P; i < S; i++) {
+            int j = i - P;
+
+            checkAndAddAlphabet(charArr[i]);
+            checkAndRemoveAlphabet(charArr[j]);
+            if(check == 4) result++;
+        }
 
         System.out.println(result);
-            br.close();
+        br.close();
+
     }
 
-    private static void remove(char c) {
+    private static void checkAndAddAlphabet(char c) {
         switch (c) {
-            case 'A':
-                if(myArr[0] == checkArr[0]) count--;
-                myArr[0]--;
-                break;
-            case 'C':
-                if(myArr[1] == checkArr[1]) count--;
-                myArr[1]--;
-                break;
-            case 'G':
-                if(myArr[2] == checkArr[2]) count--;
-                myArr[2]--;
-                break;
-            case 'T':
-                if(myArr[3] == checkArr[3]) count--;
-                myArr[3]--;
-                break;
-        }
-    }
-
-    private static void getAdd(char c) {
-        switch (c) {
-            case 'A':
+            case'A':
                 myArr[0]++;
-                if(myArr[0] == checkArr[0]) count++;
+                if (myArr[0] == checkArr[0]) {
+                    check++;
+                }
                 break;
-            case 'C':
+            case'C':
                 myArr[1]++;
-                if(myArr[1] == checkArr[1]) count++;
+                if (myArr[1] == checkArr[1]) {
+                    check++;
+                }
                 break;
-            case 'G':
+            case'G':
                 myArr[2]++;
-                if(myArr[2] == checkArr[2]) count++;
+                if (myArr[2] == checkArr[2]) {
+                    check++;
+                }
                 break;
             case 'T':
                 myArr[3]++;
-                if(myArr[3] == checkArr[3]) count++;
+                if (myArr[3] == checkArr[3] ) {
+                    check++;
+                }
                 break;
+        }
 
+    }
+
+    /**
+     *
+     * 먼저 앞에 있던 문자열을 뺴주는 역할을 한다.
+     */
+    private static void checkAndRemoveAlphabet(char c) {
+        switch (c) {
+            case'A':
+                if (myArr[0] == checkArr[0]) {
+                    check--;
+                }
+                myArr[0]--;
+                break;
+            case'C':
+                if (myArr[1] == checkArr[1]) {
+                    check--;
+                }
+                myArr[1]--;
+                break;
+            case'G':
+                if (myArr[2] == checkArr[2]) {
+                    check--;
+                }
+                myArr[2]--;
+                break;
+            case 'T':
+                if (myArr[3] == checkArr[3]) {
+                    check--;
+                }
+                myArr[3]--;
+                break;
         }
     }
 }

@@ -37,8 +37,8 @@ class Main {
                     startIdx++;
                 } else if (arr[startIdx] + arr[endIdx] > sum) {
                     endIdx--;
-                } else {
-                    count++;
+                } else { // 같으면 startIdx 와 endIdx를 한칸씩 옮긴다.
+                        count++;
                     startIdx++;
                     endIdx--;
                 }

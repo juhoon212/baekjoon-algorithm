@@ -1,5 +1,4 @@
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,30 +17,28 @@ class Main {
 
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((o1, o2) -> {
 
+            int num1 = Math.abs(o1);
+            int num2 = Math.abs(o2);
 
-            int first = Math.abs(o1);
-            int second = Math.abs(o2);
-
-            if(first == second) { // 절댓값이 같은 경우 음수 우선
+            if(num1 == num2) {
                 return o1 > o2 ? 1 : -1;
             }
 
-            return first - second; // 절대값 작은 데이터 우선
+            return num1 - num2;
         });
 
         for (int i = 0; i < N; i++) {
-            int request = Integer.parseInt(br.readLine());
-            if(request == 0) {
+            int x = Integer.parseInt(br.readLine());
+            if(x == 0) {
                 if(priorityQueue.isEmpty()) {
                     System.out.println("0");
                 } else {
                     System.out.println(priorityQueue.poll());
                 }
             } else {
-                priorityQueue.add(request);
+                priorityQueue.add(x);
             }
         }
-
 
     }
 }

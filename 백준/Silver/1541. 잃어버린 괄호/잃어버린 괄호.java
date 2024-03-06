@@ -1,38 +1,48 @@
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 
-    static int result = 0;
+    public static void main(String[] args) throws IOException {
 
-    public static void main(String[] args) {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        String[] splitArr = str.split("-");
+        String line = st.nextToken();
 
-        for (int i = 0; i < splitArr.length; i++) {
-            int sumResult = sum(splitArr[i]);
+        String[] split = line.split("-");
+
+        int total = 0;
+
+        for (int i = 0; i < split.length; i++) {
+
+            int sum = sumSplitArr(split[i]);
 
             if(i == 0) {
-                result += sumResult;
+                total += sum;
             } else {
-                result -= sumResult;
+                total -= sum;
             }
         }
 
-        System.out.println(result);
+        System.out.println(total);
+        br.close();
     }
 
-    private static int sum(String s) {
+    private static int sumSplitArr(String s) {
 
-        String[] splitArr = s.split("[+]");
-        int count = 0;
+        String[] split = s.split("[+]");
 
-        for (int i = 0; i < splitArr.length; i++) {
-            count += Integer.parseInt(splitArr[i]);
+        int result = 0;
+
+        for (int i = 0; i < split.length; i++) {
+
+            result += Integer.parseInt(split[i]);
         }
-        return count;
 
+        return result;
     }
 }

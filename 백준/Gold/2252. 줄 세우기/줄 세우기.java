@@ -1,40 +1,46 @@
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int M = sc.nextInt();
-        ArrayList<ArrayList<Integer>> A = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
+        // 학생 수
+        int N = Integer.parseInt(st.nextToken());
+        // 키를 비교한 횟수
+        int M = Integer.parseInt(st.nextToken());
 
-        for (int i = 0; i <= N; i++) {
-            A.add(new ArrayList<>());
+        ArrayList<Integer>[] graph = new ArrayList[N + 1];
+
+        for (int i = 1; i <= N; i++) {
+            graph[i] = new ArrayList<>();
         }
 
-        int indegree[] = new int[N + 1];
+        int[] inDegree = new int[N + 1];
 
         for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int start = Integer.parseInt(st.nextToken());
+            int end = Integer.parseInt(st.nextToken());
 
-            int S = sc.nextInt();
-            int E = sc.nextInt();
-
-            A.get(S).add(E);
-            indegree[E]++;
+            graph[start].add(end);
+            inDegree[end]++;
         }
 
         Queue<Integer> queue = new LinkedList<>();
 
         for (int i = 1; i <= N; i++) {
-
-            if (indegree[i] == 0) {
+            if (inDegree[i] == 0) {
                 queue.offer(i);
             }
         }
@@ -42,13 +48,14 @@ public class Main {
         while (!queue.isEmpty()) {
             int now = queue.poll();
             System.out.println(now + " ");
-            for (Integer next : A.get(now)) {
-                indegree[next]--;
-                if(indegree[next] == 0) {
-                    queue.offer(next);
+            for (Integer i : graph[now]) {
+                inDegree[i]--;
+                if (inDegree[i] == 0) {
+                    queue.offer(i);
                 }
             }
         }
+
 
     }
 }

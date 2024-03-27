@@ -1,11 +1,22 @@
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ *  <세그먼트 트리> => 수의 변경이나 합이 빈번히 일어남
+ *  1. 트리 초기화
+ *  2. 부모 노드값 채우기
+ *  3. 질의 값 구하기 => (start + 1 / 2) , (end - 1 / 2)
+ *  4. 업데이트
+ */
+
+
 public class Main {
 
+    // -2^63 >= 주어진수 <= 2^63-1
     static long[] tree;
 
     public static void main(String[] args) throws IOException {
@@ -13,61 +24,59 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        long N = Integer.parseInt(st.nextToken());
-        long M = Integer.parseInt(st.nextToken());
-        long K = Integer.parseInt(st.nextToken());
+        long N = Long.parseLong(st.nextToken()); // 수의 개수
+        long M = Long.parseLong(st.nextToken()); // 수의 변경 횟수
+        long K = Long.parseLong(st.nextToken()); // 구간 합 횟수
 
+        long treeHeight = 0;
+        long temp = N;
 
-        int treeHeight = 0;
-        long length = N;
-
-        while (length != 0) {
-            length /= 2;
+        while (temp > 0) {
+            temp /= 2;
             treeHeight++;
         }
 
-        int treeSize = (int) Math.pow(2, treeHeight + 1);
-        int NodeStartIndex = treeSize / 2;
+        long treeSize = (long) Math.pow(2, treeHeight + 1);
+        long startNodeIndex = treeSize / 2;
 
-        tree = new long[(int) (treeSize + 1)];
+        tree = new long[(int) treeSize];
 
-        for (int i = NodeStartIndex; i < NodeStartIndex + N; i++) {
+        for (int i = (int) startNodeIndex; i < startNodeIndex + N; i++) {
             tree[i] = Long.parseLong(br.readLine());
         }
 
-        setTree(treeSize - 1); // 트리세팅
+        setTree(treeSize - 1);
 
         for (int i = 0; i < M + K; i++) {
             st = new StringTokenizer(br.readLine());
 
-            long a = Long.parseLong(st.nextToken()); // 질의 유형
-            long s = Long.parseLong(st.nextToken()); // 시작 인덱스
-            long e = Long.parseLong(st.nextToken()); // 종료 인덱스 or 변경 값
+            long a = Long.parseLong(st.nextToken());
+            long b = Long.parseLong(st.nextToken());
+            long c = Long.parseLong(st.nextToken());
 
-            if (a == 1) { // 데이터 변경
-                changeVal( (s + NodeStartIndex - 1), e); // 해당 인덱스 + 2^k-1
-            }else if (a == 2) { // 구간합 구하기
-                s = s + NodeStartIndex - 1;
-                e = e + NodeStartIndex - 1;
-                long sum = getSum(s, e);
-
-                System.out.println(sum);
+            if (a == 1) {
+                changeVal(b + startNodeIndex - 1, c);
+            } else if (a == 2) {
+                long result = getSum(b + startNodeIndex - 1, c + startNodeIndex - 1);
+                System.out.println(result);
             }
         }
 
         br.close();
+
     }
 
-    private static void setTree(int i) {
+    private static void setTree(long num) {
 
-        while (i != 1) {
-            tree[i / 2] += tree[i];
-            i--;
+        while (num > 0) {
+            tree[(int) num / 2] += tree[(int)num];
+            num--;
         }
     }
 
-    private static void changeVal(long index, long val) {
-        long diff = val - tree[(int) index]; // 더
+    private static void changeVal(long index, long value) {
+        long diff = value - tree[(int) index];
+
         while (index > 0) {
             tree[(int) index] += diff;
             index /= 2;
@@ -75,21 +84,20 @@ public class Main {
     }
 
     private static long getSum(long start, long end) {
-        long partSum = 0;
-
+        long result = 0;
         while (start <= end) {
             if (start % 2 == 1) {
-                partSum = (partSum + tree[(int) start]);
+                result += tree[(int) start];
             }
 
             if (end % 2 == 0) {
-                partSum = (partSum + tree[(int) end]);
+                result += tree[(int) end];
             }
 
             start = (start + 1) / 2;
             end = (end - 1) / 2;
         }
 
-        return partSum;
+        return result;
     }
 }

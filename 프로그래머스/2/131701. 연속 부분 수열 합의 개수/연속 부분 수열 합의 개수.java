@@ -3,20 +3,25 @@ import java.util.Set;
 
 class Solution {
      public int solution(int[] elements) {
-        int length = elements.length;
-
+        int answer = 0;
         Set<Integer> set = new HashSet<>();
+        int start = 0;
 
-        for (int i = 1; i <= length; i++) {
-            for (int j = 0; j <= length; j++) {
-                int sum = 0;
-                for (int k = j; k < i + j; k++) {
-                    sum += elements[k % length];
-                }
+        for(int i=0; i<elements.length; i++) {
+            int n = 1;
+            int idx = i;
+            int sum = 0;
+            while(n <= elements.length) {
+                sum += elements[idx++];
                 set.add(sum);
+                if(idx >= elements.length) 
+                    idx = 0;
+                n++;
             }
         }
 
-        return set.size();
+        answer = set.size();
+
+        return answer;
     }
 }

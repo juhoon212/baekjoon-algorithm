@@ -1,17 +1,16 @@
 class Solution {
-    int[][] dungeons;
     int k;
+    int[][] dungeons;
 
-    int answer = -1;
     boolean[] visited;
+    int answer = -1;
 
     public int solution(int k, int[][] dungeons) {
-
-        this.dungeons = dungeons;
         this.k = k;
-
+        this.dungeons = dungeons;
+        
         visited = new boolean[dungeons.length];
-
+        
         dfs(0, k);
 
         return answer;
@@ -20,17 +19,18 @@ class Solution {
     private void dfs(int index, int k) {
         for (int i = 0; i < dungeons.length; ++i) {
             // 탈출
+            // 방문했거나 && 최소 피로도보다 작을 때
             if (visited[i] || (k < dungeons[i][0])) {
                 continue;
             }
-
-            // 실행
+            // 실행 코드
             visited[i] = true;
-            System.out.println(k - dungeons[i][1]);
             dfs(index + 1, k - dungeons[i][1]);
             visited[i] = false;
         }
 
         answer = Math.max(answer, index);
     }
+
+   
 }

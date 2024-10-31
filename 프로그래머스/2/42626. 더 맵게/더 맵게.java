@@ -16,7 +16,7 @@ class Solution {
         int tryCount = 0;
 
         while (pq.size() > 1 && pq.peek() < K) {
-            pq.add(pq.poll() + pq.remove() * 2);
+            pq.add(pq.poll() + pq.poll() * 2);
             tryCount++;
         }
 

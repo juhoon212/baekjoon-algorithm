@@ -1,17 +1,16 @@
 class Solution {
-    public int maxSubArray(int[] nums) {
-        // nums = [1,-2,3] 라고 가정
-        // 지금 더한것과 전에 더한것의 차이를 구해서
-        // 만약에 전 value가 더 크다면 멈춘다.
-        // 현재 value가 더 크다면 계속한다.
+      public int maxSubArray(int[] nums) {
+        int cur[] = new int[nums.length];
+        int total[] = new int[nums.length];
 
-        int totalMax = nums[0];
-        int curMax = nums[0];
+        Arrays.fill(cur, nums[0]);
+        Arrays.fill(total, nums[0]);
 
         for (int i=1; i<nums.length; ++i) {
-            curMax = Math.max(nums[i], nums[i] + curMax);
-            totalMax = Math.max(totalMax, curMax);
+            cur[i] = Math.max(cur[i - 1] + nums[i], nums[i]);
+            total[i] = Math.max(cur[i], total[i-1]);
         }
-        return totalMax;
+
+        return total[nums.length - 1];
     }
 }

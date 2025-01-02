@@ -1,29 +1,23 @@
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
 public class Main {
 
-    // ( 다음에 (가 오면 다음에는 ( 가 올 수 있지만 )가 3개연달아서 나와야한다.
-    // 첫째줄에 줄의 개수
-    // 문자열 길이는 2 ~ 50
+    public static void main(String[] args) throws Exception {
 
-    public static void main(String[] args) throws IOException {
-
-        // 입력을 받는다.
+        // 입력을 받는다
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        // Stack 사용
+        // 스택 LIFO 생성
+        // 스택에 '(' 이면 집어넣고 ')' 면 뺀다.
         for (int i=0; i<N; ++i) {
-            String line = br.readLine();
-            char[] charArray = line.toCharArray();
+            char[] charArr = br.readLine().toCharArray();
             Stack<Character> stack = new Stack<>();
 
             boolean isEnd = false;
-
-            for (char now : charArray) {
+            for (char now : charArr) {
                 if (now == '(') {
                     stack.push(now);
                 } else {
@@ -36,7 +30,6 @@ public class Main {
                     }
                 }
             }
-
             if (!isEnd) {
                 if (stack.isEmpty()) {
                     System.out.println("YES");

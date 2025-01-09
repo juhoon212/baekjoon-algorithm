@@ -7,20 +7,22 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        // 입력을 받는다
+        // 입력을 받는다.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        // 스택 LIFO 생성
-        // 스택에 '(' 이면 집어넣고 ')' 면 뺀다.
-        for (int i=0; i<N; ++i) {
-            char[] charArr = br.readLine().toCharArray();
+
+        int T = Integer.parseInt(br.readLine());
+        // 괄호 문제는 먼저 stack 을 떠올린다.
+        for (int i=0; i<T; ++i) {
+            char nowArr[] = br.readLine().toCharArray();
             Stack<Character> stack = new Stack<>();
 
             boolean isEnd = false;
-            for (char now : charArr) {
+            for (char now : nowArr) {
+                // '(' 가 들어오면 stack 에 집어넣는다.
                 if (now == '(') {
                     stack.push(now);
                 } else {
+                    // ')' 가 들어오면 stack 이 비어있지 않으면 데이터를 꺼낸다.
                     if (stack.isEmpty()) {
                         System.out.println("NO");
                         isEnd = true;
@@ -30,7 +32,9 @@ public class Main {
                     }
                 }
             }
+
             if (!isEnd) {
+                // 만약 위 상황에 stack 이 비어있다면 No를 출력한다.
                 if (stack.isEmpty()) {
                     System.out.println("YES");
                 } else {
@@ -38,5 +42,7 @@ public class Main {
                 }
             }
         }
+
+
     }
 }

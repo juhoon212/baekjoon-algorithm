@@ -24,3 +24,24 @@ public class Graph {
 }
 }
 ```
+
+
+# GraphDfs
+
+```
+public class GraphBfs {
+
+    boolean visited[] = new boolean[]{};
+    List<Integer> graph[] = new ArrayList[]{};
+
+    public void dfs(int value) {
+
+        for (int v : graph[value]) {
+            visited[v] = true;
+            if (!visited[v]) {
+                dfs(v);
+            }
+        }
+    }
+}
+```

@@ -1,62 +1,82 @@
 class Solution {
-    class Node {
-        int x, y;
-        
-        public Node(int x, int y){
+     class Node {
+        int x;
+        int y;
+
+        public Node(int x, int y) {
             this.x = x;
             this.y = y;
         }
+        
+        public int getX() {
+            return this.x;
+        }
+        
+        public int getY() {
+            return this.y;
+        }
     }
-    public int N, M;
-    public int[] dx = {0, 0, 1, -1}, dy = {1, -1, 0, 0};
-    
+
     public int numIslands(char[][] grid) {
-        N = grid.length;
-        M = grid[0].length;
-        
-        boolean[][] visited = new boolean[N][M];
+
+        boolean visited[][] = new boolean[grid.length][grid[0].length];
+
         int count = 0;
-        
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                // 섬 발견했는데 아직 방문 안한 섬이면 BFS로 섬 탐색
+
+        for (int i=0; i<grid.length; ++i) {
+            for (int j=0; j<grid[0].length; ++j) {
+                // graph 의 현재 좌표가 1이거나 방문하지 않은 노드라면 bfs 돌린다.
                 if (grid[i][j] == '1' && !visited[i][j]) {
+                    visited[i][j] = true;
+                    bfs(i, j, grid, visited);
                     count++;
-                    checkIsland(i, j, visited, grid);
                 }
             }
         }
-        
+
         return count;
     }
-    
-    public void checkIsland(int x, int y, boolean[][] visited, char[][] grid) {
-        Queue<Node> queue = new LinkedList<Node>();
+
+    private void bfs(int x, int y, char[][] grid, boolean[][] visited) {
+
+        int[] dx = {1, 0, -1, 0};
+        int[] dy = {0, 1, 0, -1};
         
-        visited[x][y] = true;
-        queue.add(new Node(x, y));
+        Queue<Node> q = new LinkedList<>();
+        q.offer(new Node(x, y));
         
-        while(!queue.isEmpty()) {
-            Node current = queue.poll();
+        while (!q.isEmpty()) {
+            final Node poll = q.poll();
+
+            int nowX = poll.getX();
+            int nowY = poll.getY();
             
-            for (int i = 0; i < 4; i++) {
-                int nx = current.x + dx[i];
-                int ny = current.y + dy[i];
+            for (int i=0; i<4; ++i) {
+                int nextX = dx[i] + nowX;
+                int nextY = dy[i] + nowY;
                 
-                if (!isIn(nx, ny) || visited[nx][ny] || grid[nx][ny] == '0')
-                    continue;
-                
-                visited[nx][ny] = true;
-                queue.add(new Node(nx, ny));
+                if (isIsland(nextX, nextY, grid) && isIsland(grid[nextX][nextY], visited[nextX][nextY])) {
+                    q.offer(new Node(nextX, nextY));
+                    visited[nextX][nextY] = true;
+                }
             }
-        } 
-        
-        return;  
+        }
     }
     
-    public boolean isIn(int x, int y) {
-        if (0 <= x && x < N && 0 <= y && y < M)
+    public boolean isIsland(char island, boolean visited) {
+        if (island != '0' && !visited) {
             return true;
+        }
         return false;
+    }
+    
+    public boolean isIsland(int x, int y, char grid[][]) {
+        int limitX = grid.length;
+        int limitY = grid[0].length;
+        
+        if (x < 0 || y < 0 || x >= limitX || y >= limitY) {
+            return false;
+        }
+        return true;
     }
 }

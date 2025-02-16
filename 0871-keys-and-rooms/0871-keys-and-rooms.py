@@ -9,7 +9,6 @@ class Solution(object):
             q = deque()
             q.append(v)
             visited[v] = True
-
             while q:
                 cur_v = q.popleft()
                 for next_v in rooms[cur_v]:
@@ -17,6 +16,7 @@ class Solution(object):
                         q.append(next_v)
                         visited[next_v] = True
         bfs(0)
+
         return all(visited)
 
         

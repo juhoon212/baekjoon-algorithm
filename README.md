@@ -41,6 +41,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0053-maximum-subarray) |
+| [0070-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0070-climbing-stairs) |
 ## Tree
 |  |
 | ------- |
@@ -78,4 +79,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
+## Math
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->

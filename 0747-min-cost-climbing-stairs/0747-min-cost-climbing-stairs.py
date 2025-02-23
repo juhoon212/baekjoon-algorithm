@@ -4,19 +4,11 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        cost_length = len(cost) + 1
-        memo = [-1]*cost_length
-
+        memo_length = len(cost)+1
+        memo = [0] * memo_length
         memo[0] = cost[0]
         memo[1] = cost[1]
 
-        for i in range(2, len(cost)):
+        for i in range(2, memo_length-1):
             memo[i] = min(memo[i-1], memo[i-2]) + cost[i]
-        
-        return min(memo[len(cost) - 1], memo[len(cost) - 2])
-            
-
-
-
-
-                
+        return min(memo[len(cost)-1], memo[len(cost)-2])

@@ -1,11 +1,7 @@
-class Solution(object):
-    def uniquePathsWithObstacles(self, obstacleGrid):
-        """
-        :type obstacleGrid: List[List[int]]
-        :rtype: int
-        """
-        M, N = len(obstacleGrid), len(obstacleGrid[0])
-        dp = [0]*N
+class Solution:
+    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        M,N = len(obstacleGrid), len(obstacleGrid[0])
+        dp = [0] * N
         dp[N-1] = 1
 
         for r in reversed(range(M)):

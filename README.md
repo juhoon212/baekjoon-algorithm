@@ -34,6 +34,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0063-unique-paths-ii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0063-unique-paths-ii) |
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
 | [0283-move-zeroes](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0283-move-zeroes) |
+| [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Divide and Conquer
@@ -119,4 +120,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [1894-merge-strings-alternately](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1894-merge-strings-alternately) |
+## Sliding Window
+|  |
+| ------- |
+| [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 <!---LeetCode Topics End-->

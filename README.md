@@ -37,6 +37,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
+| [1833-find-the-highest-altitude](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1833-find-the-highest-altitude) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -124,4 +125,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
+## Prefix Sum
+|  |
+| ------- |
+| [1833-find-the-highest-altitude](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1833-find-the-highest-altitude) |
 <!---LeetCode Topics End-->

@@ -134,4 +134,16 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [1392-find-the-difference-of-two-arrays](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1392-find-the-difference-of-two-arrays) |
+## Design
+|  |
+| ------- |
+| [0969-number-of-recent-calls](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0969-number-of-recent-calls) |
+## Queue
+|  |
+| ------- |
+| [0969-number-of-recent-calls](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0969-number-of-recent-calls) |
+## Data Stream
+|  |
+| ------- |
+| [0969-number-of-recent-calls](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0969-number-of-recent-calls) |
 <!---LeetCode Topics End-->

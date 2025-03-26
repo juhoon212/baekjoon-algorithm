@@ -146,4 +146,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0969-number-of-recent-calls](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0969-number-of-recent-calls) |
+## Linked List
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0206-reverse-linked-list) |
+## Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->

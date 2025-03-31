@@ -159,5 +159,10 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Binary Search Tree
 |  |
 | ------- |
+| [0374-guess-number-higher-or-lower](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0374-guess-number-higher-or-lower) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
+## Interactive
+|  |
+| ------- |
+| [0374-guess-number-higher-or-lower](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0374-guess-number-higher-or-lower) |
 <!---LeetCode Topics End-->

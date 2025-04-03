@@ -1,17 +1,11 @@
-class Solution(object):
-    def minCostClimbingStairs(self, cost):
-        """
-        :type cost: List[int]
-        :rtype: int
-        """
-        # 만약 두번째 index까지 올라간다 했을 때
-        # min(index-1, index) 중에 최소를 구하면 된다.
-        # 그러면 새로운 list를 만들어서 index-1 의 합을 저장해보자
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        # 비용을 지불하면 1단계 혹은 2단계 까지 올라갈 수 있다.
+        # result[i] = min(result[i-1], result[i-2])
 
-        dp = [0] * len(cost)
-        dp[0] = cost[0]
-        dp[1] = cost[1]
+        memo = [0]* (len(cost)+1)
 
-        for i in range(2, len(cost)):
-            dp[i] = min(dp[i-1]+cost[i], dp[i-2]+cost[i])
-        return min(dp[len(cost)-1], dp[len(cost)-2])
+        for i in range(2, len(cost)+1):
+            memo[i] = min(memo[i-1]+cost[i-1], memo[i-2] + cost[i-2])
+
+        return memo[len(cost)]

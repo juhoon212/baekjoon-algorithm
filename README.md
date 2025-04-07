@@ -59,6 +59,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0104-maximum-depth-of-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
+| [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -67,12 +68,14 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
+| [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
 ## Binary Tree
 |  |
 | ------- |
 | [0104-maximum-depth-of-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
+| [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
 ## Breadth-First Search
 |  |
 | ------- |

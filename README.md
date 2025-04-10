@@ -35,6 +35,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
 | [0283-move-zeroes](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0283-move-zeroes) |
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
+| [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1319-unique-number-of-occurrences](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1319-unique-number-of-occurrences) |
@@ -141,6 +142,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Prefix Sum
 |  |
 | ------- |
+| [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
 | [1833-find-the-highest-altitude](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1833-find-the-highest-altitude) |
 ## Hash Table
 |  |

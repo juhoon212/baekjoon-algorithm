@@ -106,6 +106,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0062-unique-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0070-climbing-stairs) |
+| [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
 | [1236-n-th-tribonacci-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1236-n-th-tribonacci-number) |
 ## Memoization
 |  |
@@ -134,6 +135,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
+| [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
 | [1894-merge-strings-alternately](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1894-merge-strings-alternately) |
 ## Sliding Window
 |  |

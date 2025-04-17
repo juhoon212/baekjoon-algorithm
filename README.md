@@ -139,6 +139,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
+| [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
 | [1894-merge-strings-alternately](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1894-merge-strings-alternately) |
 ## Sliding Window
 |  |
@@ -154,6 +155,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [1319-unique-number-of-occurrences](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1392-find-the-difference-of-two-arrays) |
+| [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
 ## Design
 |  |
 | ------- |
@@ -187,4 +189,12 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0011-container-with-most-water) |
+## Sorting
+|  |
+| ------- |
+| [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
+## Counting
+|  |
+| ------- |
+| [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
 <!---LeetCode Topics End-->

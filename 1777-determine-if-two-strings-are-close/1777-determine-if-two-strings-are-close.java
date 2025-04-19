@@ -28,6 +28,12 @@ class Solution {
             return false; // 문자 집합이 다름
         }
 
-        return mapList1.equals(mapList2);
+        for (int i=0; i<mapList1.size(); ++i) {
+            if (mapList1.get(i).intValue() != mapList2.get(i).intValue()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

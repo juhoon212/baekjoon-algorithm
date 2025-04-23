@@ -15,26 +15,29 @@
  */
 class Solution {
     public TreeNode deleteNode(TreeNode root, int key) {
-        if (root == null) return null;
 
-        if (root.val < key) {
-            root.right = deleteNode(root.right, key); // 재귀로 오른쪽을 찾는다.
-        } else if (root.val > key) {
+        if (root == null) {
+            return null;
+        }
+
+        if (root.val > key) {
             root.left = deleteNode(root.left, key);
-        } else { // key == root.val
-            // 리프노드
+        } else if (root.val < key) {
+            root.right = deleteNode(root.right, key);
+        } else { //root.val == key
+            // 리프 노드
             if (root.left == null && root.right == null) {
                 return null;
             }
 
-            // 하나의 노드만 자식으로 가지고 있을 때
+            // 자식이 하나만 있을때
             if (root.left == null) {
                 return root.right;
             } else if (root.right == null) {
                 return root.left;
             }
 
-            // 이진 트리일때
+            // 완전 이진 트리
             TreeNode result = findNode(root.right);
             root.val = result.val;
             root.right = deleteNode(root.right, result.val);
@@ -43,10 +46,12 @@ class Solution {
         return root;
     }
 
-    private TreeNode findNode(TreeNode node) { 
-        while (node.left != null) { 
-            node = node.left;
+    private TreeNode findNode(TreeNode node) {
+            while (node.left != null) {
+                node = node.left;
+            }
+            return node;
         }
-        return node;
-    }
+
+    
 }

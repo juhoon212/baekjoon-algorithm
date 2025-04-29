@@ -1,31 +1,25 @@
 class Solution {
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        boolean visited[] = new boolean[rooms.size()];
+        // 그래프 탐색
+        boolean[] visited = new boolean[rooms.size()];
         visited[0] = true;
-        bfs(rooms.get(0), rooms, visited);
-        
+
+        dfs(rooms, rooms.get(0), visited);
+
         for (boolean isVisited : visited) {
-            if (!isVisited) {
-                return false;
-            }
+            if (!isVisited) return false;
         }
-        
         return true;
     }
 
-    public void bfs(List<Integer> keys, List<List<Integer>> rooms, boolean[] visited) {
-        Queue<List<Integer>> q = new LinkedList<>();
-        q.offer(keys);
-        
-        while(!q.isEmpty()) {
-            final List<Integer> poll = q.poll();
-            
-            for (int key : poll) {
-                if (!visited[key]) {
-                    q.offer(rooms.get(key));
-                    visited[key] = true;
-                }
+    void dfs(List<List<Integer>> rooms, List<Integer> room, boolean[] visited) {
+        for (int key : room) {
+            if (!visited[key]) {
+                visited[key] = true;
+                dfs(rooms, rooms.get(key), visited);
             }
         }
     }
+
+    
 }

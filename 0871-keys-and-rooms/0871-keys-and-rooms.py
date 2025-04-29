@@ -1,22 +1,20 @@
-class Solution(object):
-    def canVisitAllRooms(self, rooms):
-        """
-        :type rooms: List[List[int]]
-        :rtype: bool
-        """
+class Solution:
+    def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         visited = [False] * len(rooms)
-        def bfs(v):
+
+        def bfs():
             q = deque()
-            q.append(v)
-            visited[v] = True
+            q.append(rooms[0])
+            visited[0] = True
             while q:
-                cur_v = q.popleft()
-                for next_v in rooms[cur_v]:
-                    if not visited[next_v]:
-                        q.append(next_v)
-                        visited[next_v] = True
-        bfs(0)
+                now = q.popleft()
+                
+                for num in now:
+                    if not visited[num]:
+                        visited[num] = True
+                        q.append(rooms[num])
+        bfs()
 
         return all(visited)
-
+                
         

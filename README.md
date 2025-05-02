@@ -43,6 +43,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [1392-find-the-difference-of-two-arrays](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1392-find-the-difference-of-two-arrays) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1528-kids-with-the-greatest-number-of-candies) |
 | [1833-find-the-highest-altitude](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1833-find-the-highest-altitude) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -100,6 +101,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 ## Union Find
 |  |
 | ------- |
@@ -111,6 +113,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0063-unique-paths-ii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0063-unique-paths-ii) |
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
+| [2038-nearest-exit-from-entrance-in-maze](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 ## Graph
 |  |
 | ------- |

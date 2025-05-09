@@ -10,16 +10,12 @@ class Solution {
         for (int num : nums) {
             pq.add(num);
         }
-        int count = 0;
+        int count = 1;
         while (count != k) {
-            int result = pq.poll();
+            pq.poll();
             count++;
-
-            if (count == k) {
-                return result;
-            }
         }
 
-        return count;
+        return pq.peek();
     }
 }

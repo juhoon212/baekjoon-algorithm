@@ -34,6 +34,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0053-maximum-subarray](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0053-maximum-subarray) |
 | [0063-unique-paths-ii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0063-unique-paths-ii) |
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
+| [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [0283-move-zeroes](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0283-move-zeroes) |
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
@@ -49,6 +50,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0053-maximum-subarray) |
+| [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -140,6 +142,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 ## Shortest Path
 |  |
@@ -213,10 +216,15 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Sorting
 |  |
 | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Counting
 |  |
 | ------- |
 | [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
+## Quickselect
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 <!---LeetCode Topics End-->

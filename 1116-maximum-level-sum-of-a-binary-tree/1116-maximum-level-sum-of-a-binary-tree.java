@@ -21,19 +21,17 @@ class Solution {
     int bfs(TreeNode root) {
         Queue<TreeNode> q = new ArrayDeque<>();
         q.offer(root);
-        int maxValue = 0;
-        Map<Integer, Integer> map = new HashMap<>();
 
-        int idx = 0;
+        int currentLevel = 1;
+        int answerLevel = 1;
+        int maxSum = Integer.MIN_VALUE;
+
+
         while (!q.isEmpty()) {
             int qSize = q.size();
-            int result = 0;            
+            int result = 0;
             for (int i=0; i<qSize; ++i) {
                 TreeNode now = q.poll();
-
-                if (now == null) {
-                    continue;
-                }
 
                 result += now.val;
 
@@ -45,14 +43,15 @@ class Solution {
                     q.offer(now.right);
                 }
             }
-            idx++;
-            if (map.get(result) == null) {
-                map.put(result, idx);
+
+            if (result > maxSum) {
+                maxSum = result;
+                answerLevel = currentLevel;
             }
 
-            maxValue = Math.max(maxValue, result);
+            currentLevel++;
         }
 
-        return map.getOrDefault(maxValue, idx);
+        return answerLevel;
     }
 }

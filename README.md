@@ -70,6 +70,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
 ## Depth-First Search
 |  |
@@ -82,6 +83,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
 | [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
 ## Binary Tree
 |  |
@@ -92,6 +94,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -102,6 +105,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0547-number-of-provinces](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0547-number-of-provinces) |
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
+| [1116-maximum-level-sum-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
 | [2038-nearest-exit-from-entrance-in-maze](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2038-nearest-exit-from-entrance-in-maze) |

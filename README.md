@@ -61,6 +61,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
 | [1236-n-th-tribonacci-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1236-n-th-tribonacci-number) |
+| [1250-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1250-longest-common-subsequence) |
 ## Tree
 |  |
 | ------- |
@@ -165,6 +166,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
+| [1250-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1250-longest-common-subsequence) |
 | [1777-determine-if-two-strings-are-close](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1777-determine-if-two-strings-are-close) |
 | [1894-merge-strings-alternately](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1894-merge-strings-alternately) |
 ## Sliding Window

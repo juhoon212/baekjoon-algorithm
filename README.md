@@ -36,6 +36,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
 | [0215-kth-largest-element-in-an-array](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [0283-move-zeroes](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0283-move-zeroes) |
+| [0300-longest-increasing-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
@@ -58,6 +59,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0062-unique-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0063-unique-paths-ii) |
 | [0070-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0070-climbing-stairs) |
+| [0300-longest-increasing-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
 | [1236-n-th-tribonacci-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1236-n-th-tribonacci-number) |
@@ -207,6 +209,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 ## Binary Search Tree
 |  |
 | ------- |
+| [0300-longest-increasing-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0374-guess-number-higher-or-lower](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0374-guess-number-higher-or-lower) |
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |

@@ -40,6 +40,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
+| [1046-max-consecutive-ones-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1319-unique-number-of-occurrences](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1392-find-the-difference-of-two-arrays) |
@@ -176,11 +177,13 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
+| [1046-max-consecutive-ones-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |
 ## Prefix Sum
 |  |
 | ------- |
 | [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
+| [1046-max-consecutive-ones-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1833-find-the-highest-altitude](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1833-find-the-highest-altitude) |
 ## Hash Table
 |  |
@@ -215,6 +218,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0374-guess-number-higher-or-lower](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0374-guess-number-higher-or-lower) |
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
+| [1046-max-consecutive-ones-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2392-successful-pairs-of-spells-and-potions) |
 ## Interactive
 |  |

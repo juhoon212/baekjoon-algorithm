@@ -5,7 +5,6 @@ class Solution {
             return res;
         }
 
-
         Map<Character, String> map = new HashMap<>();
         map.put('2', "abc");
         map.put('3', "def");
@@ -17,28 +16,28 @@ class Solution {
         map.put('9', "wxyz");
 
         backTrack(digits, 0, new StringBuilder(), res, map);
-
         return res;
     }
 
     void backTrack(
         String digits, 
         int idx, 
-        StringBuilder comb, 
-        List<String> res,
-        Map<Character, String> letters
+        StringBuilder sb, 
+        List<String> res, 
+        Map<Character, String> map
     ) {
 
         if (idx == digits.length()) {
-            res.add(comb.toString());
+            res.add(sb.toString());
             return;
         }
 
-        String matchLetter = letters.get(digits.charAt(idx));
-        for (char letter : matchLetter.toCharArray()) {
-            comb.append(letter);
-            backTrack(digits, idx+1, comb, res, letters);
-            comb.deleteCharAt(comb.length()-1);
+        String letters = map.get(digits.charAt(idx));
+
+        for (char letter : letters.toCharArray()) {
+            sb.append(letter);
+            backTrack(digits, idx+1, sb, res, map);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }

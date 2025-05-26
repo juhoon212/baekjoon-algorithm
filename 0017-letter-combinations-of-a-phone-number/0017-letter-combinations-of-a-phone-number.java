@@ -1,11 +1,11 @@
 class Solution {
     public List<String> letterCombinations(String digits) {
-        List<String> res = new ArrayList<>();
-        if (digits == null || digits.length() == 0) {
-            return res;
+        List<String> answers = new ArrayList<>();
+        if (digits.length() == 0) {
+            return answers;
         }
-
         Map<Character, String> map = new HashMap<>();
+
         map.put('2', "abc");
         map.put('3', "def");
         map.put('4', "ghi");
@@ -15,29 +15,24 @@ class Solution {
         map.put('8', "tuv");
         map.put('9', "wxyz");
 
-        backTrack(digits, 0, new StringBuilder(), res, map);
-        return res;
+        
+        backTrack(digits, 0, new StringBuilder(), map, answers);
+        return answers;
     }
 
-    void backTrack(
-        String digits, 
-        int idx, 
-        StringBuilder sb, 
-        List<String> res, 
-        Map<Character, String> map
-    ) {
-
-        if (idx == digits.length()) {
-            res.add(sb.toString());
+    void backTrack(String digits, int index, StringBuilder sb, Map<Character, String> map, List<String> answers) {
+        if (index == digits.length()) {
+            answers.add(sb.toString());
             return;
         }
 
-        String letters = map.get(digits.charAt(idx));
+        String letter = map.get(digits.charAt(index)); // abc
 
-        for (char letter : letters.toCharArray()) {
-            sb.append(letter);
-            backTrack(digits, idx+1, sb, res, map);
+        for (Character digit : letter.toCharArray()) {
+            sb.append(digit);
+            backTrack(digits, index+1, sb, map, answers);
             sb.deleteCharAt(sb.length()-1);
         }
+
     }
 }

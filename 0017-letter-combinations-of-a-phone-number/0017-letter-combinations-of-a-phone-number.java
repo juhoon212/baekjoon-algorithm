@@ -1,10 +1,11 @@
 class Solution {
     public List<String> letterCombinations(String digits) {
+        Map<Character, String> map = new HashMap<>();
         List<String> answers = new ArrayList<>();
-        if (digits.length() == 0) {
+
+        if (digits == null || digits.equals("")) {
             return answers;
         }
-        Map<Character, String> map = new HashMap<>();
 
         map.put('2', "abc");
         map.put('3', "def");
@@ -15,24 +16,23 @@ class Solution {
         map.put('8', "tuv");
         map.put('9', "wxyz");
 
-        
-        backTrack(digits, 0, new StringBuilder(), map, answers);
+        backTrack(digits, 0, map, answers, new StringBuilder());
         return answers;
     }
 
-    void backTrack(String digits, int index, StringBuilder sb, Map<Character, String> map, List<String> answers) {
-        if (index == digits.length()) {
+    void backTrack(String digits, int idx, Map<Character, String> map, List<String> answers, StringBuilder sb) {
+        
+        // 탈출 조건
+        if (idx == digits.length()) {
             answers.add(sb.toString());
             return;
         }
 
-        String letter = map.get(digits.charAt(index)); // abc
-
-        for (Character digit : letter.toCharArray()) {
+        String letters = map.get(digits.charAt(idx));
+        for (Character digit : letters.toCharArray()) {
             sb.append(digit);
-            backTrack(digits, index+1, sb, map, answers);
+            backTrack(digits, idx+1, map, answers, sb);
             sb.deleteCharAt(sb.length()-1);
         }
-
     }
 }

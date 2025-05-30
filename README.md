@@ -72,6 +72,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0104-maximum-depth-of-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
@@ -84,6 +85,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0199-binary-tree-right-side-view](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0547-number-of-provinces](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0547-number-of-provinces) |
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
@@ -96,6 +98,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0104-maximum-depth-of-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0199-binary-tree-right-side-view](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0199-binary-tree-right-side-view) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0450-delete-node-in-a-bst](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0450-delete-node-in-a-bst) |
 | [0783-search-in-a-binary-search-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0783-search-in-a-binary-search-tree) |
 | [0904-leaf-similar-trees](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0904-leaf-similar-trees) |
@@ -169,6 +172,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
 | [1250-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1250-longest-common-subsequence) |
@@ -250,4 +254,5 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0216-combination-sum-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0216-combination-sum-iii) |
+| [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 <!---LeetCode Topics End-->

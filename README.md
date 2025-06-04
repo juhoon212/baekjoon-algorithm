@@ -41,6 +41,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0643-maximum-average-subarray-i](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0643-maximum-average-subarray-i) |
 | [0724-find-pivot-index](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0724-find-pivot-index) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
+| [1036-rotting-oranges](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1036-rotting-oranges) |
 | [1046-max-consecutive-ones-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1046-max-consecutive-ones-iii) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1319-unique-number-of-occurrences](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1319-unique-number-of-occurrences) |
@@ -113,6 +114,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0547-number-of-provinces](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0547-number-of-provinces) |
 | [0744-network-delay-time](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0871-keys-and-rooms) |
+| [1036-rotting-oranges](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1036-rotting-oranges) |
 | [1116-maximum-level-sum-of-a-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1116-maximum-level-sum-of-a-binary-tree) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1544-count-good-nodes-in-binary-tree](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1544-count-good-nodes-in-binary-tree) |
@@ -127,6 +129,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | ------- |
 | [0063-unique-paths-ii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0063-unique-paths-ii) |
 | [0200-number-of-islands](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0200-number-of-islands) |
+| [1036-rotting-oranges](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1036-rotting-oranges) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [2038-nearest-exit-from-entrance-in-maze](https://github.com/juhoon212/baekjoon-algorithm/tree/master/2038-nearest-exit-from-entrance-in-maze) |
 ## Graph

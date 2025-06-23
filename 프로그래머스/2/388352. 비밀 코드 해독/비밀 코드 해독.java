@@ -1,12 +1,13 @@
 import java.util.*;
 
 class Solution {
-    int answer;
-    boolean[] visited;
     int[] arr = new int[5];
     Set<Integer>[] set;
+    int answer;
+    boolean[] visited;
+    
     public int solution(int n, int[][] q, int[] ans) {
-        set = new Set[q.length];
+        set = new HashSet[q.length];
         
         for (int i=0; i<q.length; ++i) {
             set[i] = new HashSet<>();
@@ -15,14 +16,14 @@ class Solution {
             }
         }
         
-        visited = new boolean[n + 1];
+        visited = new boolean[n+1];
         makeArr(0, 1, n, q, ans);
         return answer;
     }
     
     void makeArr(int cnt, int cur, int n, int[][] q, int[] ans) {
         if (cnt == 5) {
-            if (compareAns(q, ans)) answer++;
+            if (check(q, ans)) answer++;
             return;
         }
         
@@ -35,7 +36,7 @@ class Solution {
         }
     }
     
-    boolean compareAns(int[][] q, int[] ans) {
+    boolean check(int[][] q, int[] ans) {
         for (int i=0; i<q.length; ++i) {
             int sum = 0;
             

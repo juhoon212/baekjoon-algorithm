@@ -1,13 +1,13 @@
 import java.util.*;
 
 class Solution {
-    int[] arr = new int[5];
+    int[] answers = new int[5];
     Set<Integer>[] set;
-    int answer;
     boolean[] visited;
-    
+    int answer;
     public int solution(int n, int[][] q, int[] ans) {
         set = new HashSet[q.length];
+        visited = new boolean[n+1];
         
         for (int i=0; i<q.length; ++i) {
             set[i] = new HashSet<>();
@@ -16,7 +16,6 @@ class Solution {
             }
         }
         
-        visited = new boolean[n+1];
         makeArr(0, 1, n, q, ans);
         return answer;
     }
@@ -29,7 +28,8 @@ class Solution {
         
         for (int i=cur; i<=n; ++i) {
             if (visited[i]) continue;
-            arr[cnt] = i;
+            answers[cnt] = i;
+            
             visited[i] = true;
             makeArr(cnt+1, i+1, n, q, ans);
             visited[i] = false;
@@ -40,7 +40,7 @@ class Solution {
         for (int i=0; i<q.length; ++i) {
             int sum = 0;
             
-            for (int num : arr) {
+            for (int num : answers) {
                 if (set[i].contains(num)) sum++;
             }
             

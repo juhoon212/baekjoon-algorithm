@@ -2,51 +2,41 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[][] edges) {
-        HashMap<Integer, int[]> graph = new HashMap<>();
+        // int[] from, to
+        HashMap<Integer, int[]> map = new HashMap<>();
+        int maxVal = -1;
         
-        int maxValue = -1;
         for (int[] edge : edges) {
             int from = edge[0];
             int to = edge[1];
             
-            graph.putIfAbsent(from, new int[2]);
-            graph.putIfAbsent(to, new int[2]);
+            map.putIfAbsent(from, new int[2]);
+            map.putIfAbsent(to, new int[2]);
             
-            graph.get(from)[0]++;
-            graph.get(to)[1]++;
+            map.get(from)[0]++;
+            map.get(to)[1]++;
             
-            maxValue = Math.max(maxValue, Math.max(from, to));
+            maxVal = Math.max(maxVal, Math.max(from, to));
         }
         
         int[] answer = new int[4];
-        
-        for (int i=1; i<=maxValue; ++i) {
-            if (!graph.containsKey(i)) continue;
+        for (int i=1; i<=maxVal; ++i) {
+            if (!map.containsKey(i)) continue;
             
-            int[] now = graph.get(i);
+            int[] now = map.get(i);
             
             // 정점
-            if (now[0] >= 2 && now[1] == 0) {
-                answer[0] = i;
-            }
+            if (now[0] >= 2 && now[1] == 0) answer[0] = i;
             
-            // 막대모양
-            if (now[0] == 0) {
-                answer[2]++;
-            }
+            // 막대 모양 그래프
+            if (now[0] == 0) answer[2]++;
             
             // 8자 모양
-            if (now[0] >= 2 && now[1] >= 2) {
-                answer[3]++;
-            }
+            if (now[0] >= 2 && now[1] >= 2) answer[3]++;
         }
         
-        // 도넛모양
-        // 정점에서 from이 총 그래프 수니까
-        // 정점 from - (막대모양 그래프 수 + 8자 모양 그래프 수)
-        
-        answer[1] = graph.get(answer[0])[0] - (answer[2] + answer[3]);
-        
+        // 도넛 모양
+        answer[1] = map.get(answer[0])[0] - (answer[2] + answer[3]);
         return answer;
     }
 }

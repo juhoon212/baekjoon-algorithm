@@ -1,14 +1,15 @@
 import java.util.*;
 
 class Solution {
-    int[] dx = new int[]{0, 1, -1, 0};
+    int[] dx = new int[]{0, -1, 1, 0};
     int[] dy = new int[]{1, 0, 0, -1};
     int answer;
     public int solution(String[] storage, String[] requests) {
-        // 2차원 배열 생성
+        // 먼저 2차원 배열 구성
         int n = storage.length;
         int m = storage[0].length();
-        final int INF = 100001;
+        
+        // 맴에다가 세팅 
         int[][] map = new int[n][m];
         for (int i=0; i<n; ++i) {
             for (int j=0; j<m; ++j) {
@@ -19,20 +20,20 @@ class Solution {
         
         for (String request : requests) {
             int target = request.charAt(0) - 'A';
-            
-            // 크레인
+            // request의 길이가 2이면 크레인
             if (request.length() == 2) {
                 for (int i=0; i<n; ++i) {
                     for (int j=0; j<m; ++j) {
-                        if (map[i][j] == target) map[i][j] = -1; 
+                        if (map[i][j] == target) map[i][j] = -1;
                         continue;
                     }
                 }
             }
             
             // 지게차
+            // 1: 외부 0: 내부 INF: 아직 탐색안함
             int[][] memo = new int[n][m];
-            // INF는 한번도 탐색하지 않은 곳
+            final int INF = 1000000001;
             for (int i=0; i<n; ++i) {
                 Arrays.fill(memo[i], INF);
             }
@@ -42,43 +43,46 @@ class Solution {
             
             for (int i=0; i<n; ++i) {
                 for (int j=0; j<m; ++j) {
-                    // 출발점 찾기
+                    // 출발점 구하기
+                    // 출발점은 가장자리여야 한다.
+                    // 이유는 내부에서 시작하면 사방이 다 막혀있는 곳을 없앨 수 있기 때문
                     if (i != 0 && j != 0 && i < n-1 && j < m-1) continue;
-                    // 삭제 되지 않은 노드라면
                     if (map[i][j] != -1) {
                         memo[i][j] = 1; // 외부
                         if (map[i][j] == target) list.add(new int[]{i, j});
                         continue;
                     }
-                    // 나머지는 내부
+                    
                     memo[i][j] = 1;
-                    q.add(new int[]{i,j});
-
+                    q.add(new int[]{i, j}); // 출발점
+                    
                     while (!q.isEmpty()) {
                         int[] now = q.poll();
-
+                        
                         for (int k=0; k<4; ++k) {
-                            int nowX = now[0] + dx[k];
-                            int nowY = now[1] + dy[k];
-
-                            if (!validate(n, m, nowX, nowY) || memo[nowX][nowY] != INF) continue;
-                            if (map[nowX][nowY] == -1) {
-                                memo[nowX][nowY] = 0;
-                                q.add(new int[]{nowX, nowY});
+                            int nextX = now[0] + dx[k];
+                            int nextY = now[1] + dy[k];
+                            
+                            if (!validate(n, m, nextX, nextY) || memo[nextX][nextY] != INF) continue;
+                            if (map[nextX][nextY] == -1) {
+                                memo[nextX][nextY] = 0;
+                                q.add(new int[]{nextX, nextY});
                                 continue;
                             }
-
-                            memo[nowX][nowY] = 1;
-                            if (map[nowX][nowY] == target) list.add(new int[]{nowX, nowY});
+                            memo[nextX][nextY] = 1;
+                            if (map[nextX][nextY] == target) list.add(new int[]{nextX, nextY});
+                            
+                            
                         }
                     }
                 }
             }
             
-            for (int[] candidate : list) {
-                map[candidate[0]][candidate[1]] = -1;
+            for (int[] d : list) {
+                map[d[0]][d[1]] = -1;
             }
         }
+        
         for (int i=0; i<n; ++i) {
             for (int j=0; j<m; ++j) {
                 if (map[i][j] != -1) answer++;
@@ -89,7 +93,7 @@ class Solution {
     }
     
     boolean validate(int n, int m, int x, int y) {
-        if (x < 0 || y < 0 || x > n-1 || y > m-1) return false;
+        if (x < 0 || x > n-1 || y < 0 || y > m-1) return false;
         return true;
     }
 }

@@ -4,15 +4,15 @@ import java.util.stream.Collectors;
 class Solution {
     public String solution(long n, String[] bans) {
         String answer = "";
-        var bases = Arrays.stream(bans)
-            .map(it -> convert(it))
+        List<Long> values = Arrays.stream(bans)
+            .map(ban -> convertTo26(ban))
             .sorted()
             .collect(Collectors.toList());
         
         var target = n;
         
-        for (Long base : bases) {
-            if (target >= base) ++target;
+        for (Long value : values) {
+            if (target >= value) target++;
             else break;
         }
         
@@ -20,25 +20,27 @@ class Solution {
     }
     
     String convertToString(long target) {
-        var number = target;
-        var result = new StringBuilder();
+        var sb = new StringBuilder();
         
-        while (number-- > 0) {
-            var c = (int) ('a' + (number % 26));
-            result.append((char) c);
-            number /= 26;
+        var num = target;
+        
+        while (num-- > 0) {
+            int c = (int)('a' + (num % 26));
+            sb.append((char) c);
+            num /= 26;
         }
         
-        return result.reverse().toString();
+        return sb.reverse().toString();
     }
     
-    Long convert(String input) {
-        var result = 0L;
-        for (char c : input.toCharArray()) {
-            var value = c - 'a' + 1;
+    Long convertTo26(String target) {
+        // a~z = 26
+        Long result = 0L;
+        for (char c : target.toCharArray()) {
+            int value = c - 'a' + 1;
             result = result * 26 + value;
         }
         
         return result;
-    } 
+    }
 }

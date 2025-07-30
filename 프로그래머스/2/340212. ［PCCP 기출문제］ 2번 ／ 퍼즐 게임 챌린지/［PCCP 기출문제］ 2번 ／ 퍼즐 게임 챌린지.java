@@ -1,6 +1,5 @@
 class Solution {
     public int solution(int[] diffs, int[] times, long limit) {
-
         return binarySearch(diffs, times, limit);
     }
     
@@ -9,24 +8,25 @@ class Solution {
         int min = 100000;
         
         while (max <= min) {
-            int level = (min + max) / 2;        
+            int level = (min + max) / 2;            
             long mid = calculate(diffs, times, level);
-            
-            if (mid > limit) max = level + 1;
+
+            if (mid > limit) max = level+1;
             else min = level - 1;
         }
         
         return max;
     }
     
-    public long calculate(int[] diffs, int[] times, int level) {
-        long cur = 0;
+    public long calculate(int[] diffs, int[] times, long level) {
+        long result = 0;
         for (int i=0; i<diffs.length; ++i) {
-            if (diffs[i] <= level) cur += times[i];
+            if (diffs[i] <= level) result += times[i];
             else {
-                cur += (long)(times[i - 1] + times[i]) * (long)(diffs[i] - level) + times[i];
+                result += (long)(times[i] + times[i-1]) * (long)(diffs[i] - level) + times[i];
             }
         }
-        return cur;
+        
+        return result;
     }
 }

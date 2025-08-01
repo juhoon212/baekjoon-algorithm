@@ -8,25 +8,21 @@ class Solution {
         int min = 100000;
         
         while (max <= min) {
-            int level = (min + max) / 2;            
-            long mid = calculate(diffs, times, level);
-
-            if (mid > limit) max = level+1;
+            int level = (max + min) / 2;
+            long total = calc(diffs, times, level);
+            
+            if (total > limit) max = level + 1;
             else min = level - 1;
         }
-        
         return max;
     }
     
-    public long calculate(int[] diffs, int[] times, long level) {
-        long result = 0;
+    public long calc(int[] diffs, int[] times, long level) {
+        long total = 0;
         for (int i=0; i<diffs.length; ++i) {
-            if (diffs[i] <= level) result += times[i];
-            else {
-                result += (long)(times[i] + times[i-1]) * (long)(diffs[i] - level) + times[i];
-            }
+            if (diffs[i] <= level) total += times[i];
+            else total += (diffs[i] - level) * (times[i] + times[i-1]) + times[i];
         }
-        
-        return result;
+        return total;
     }
 }

@@ -1,17 +1,20 @@
 import java.util.*;
 
 class Solution {
-    int[] answers = new int[5];
     Set<Integer>[] set;
     boolean[] visited;
+    int[] answers = new int[5]; // 입력한 정수
     int answer;
     public int solution(int n, int[][] q, int[] ans) {
+        // 비밀 코드는 뭔지 모른다
+        // 하지만 입력한 정수와 비밀 코드와의 일치관계는 알 수 있다.
+        // q = 입력한 정수 배열
+        // ans = 일치 개수
         set = new HashSet[q.length];
         visited = new boolean[n+1];
-        
         for (int i=0; i<q.length; ++i) {
             set[i] = new HashSet<>();
-            for (int j=0; j<5; ++j) {
+            for (int j=0; j<q[0].length; ++j) {
                 set[i].add(q[i][j]);
             }
         }
@@ -40,11 +43,11 @@ class Solution {
         for (int i=0; i<q.length; ++i) {
             int sum = 0;
             
-            for (int num : answers) {
-                if (set[i].contains(num)) sum++;
+            for (int a : answers) {
+                if (set[i].contains(a)) sum++;
             }
             
-            if (ans[i] != sum) return false;
+            if (sum != ans[i]) return false;
         }
         
         return true;

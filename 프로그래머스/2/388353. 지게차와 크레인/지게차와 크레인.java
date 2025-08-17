@@ -37,27 +37,32 @@ class Solution {
                         if (map[i][j] == -1) {
                             q.add(new int[]{i, j});
                             visited[i][j] = true;
+                            continue;
+                        } 
+                        if (map[i][j] == target) {
+                            map[i][j] = -1;
+                            visited[i][j] = true;
                         }
                     }
                 }
             }
             
-            int[][] deleted = new int[n][m];
+//             int[][] deleted = new int[n][m];
             
-            for (int i=0; i<n; ++i) {
-                // 0은 삭제 안된 노드, 1은 삭제해야하는 노드
-                Arrays.fill(deleted[i], 0);
-            }
+//             for (int i=0; i<n; ++i) {
+//                 // 0은 삭제 안된 노드, 1은 삭제해야하는 노드
+//                 Arrays.fill(deleted[i], 0);
+//             }
             
             // 테두리 타깃 미리 표시
-            for (int i=0; i<n; ++i) {
-                if (map[i][0] == target) deleted[i][0] = 1;
-                if (map[i][m-1] == target) deleted[i][m-1] = 1;
-            }
-            for (int j=0; j<m; ++j) {
-                if (map[0][j] == target) deleted[0][j] = 1;
-                if (map[n-1][j] == target) deleted[n-1][j] = 1;
-            }
+            // for (int i=0; i<n; ++i) {
+            //     if (map[i][0] == target) deleted[i][0] = 1;
+            //     if (map[i][m-1] == target) deleted[i][m-1] = 1;
+            // }
+            // for (int j=0; j<m; ++j) {
+            //     if (map[0][j] == target) deleted[0][j] = 1;
+            //     if (map[n-1][j] == target) deleted[n-1][j] = 1;
+            // }
             
             // 3-2. bfs
             while (!q.isEmpty()) {
@@ -70,26 +75,25 @@ class Solution {
                     if (check(n, m, nx, ny)) continue;
                     if (visited[nx][ny]) continue;
                     
-                    
-                    
                     if (map[nx][ny] == -1) {
                         q.add(new int[]{nx, ny});
                         visited[nx][ny] = true;
-                    } else {
-                        if (map[nx][ny] == target) {
-                            deleted[nx][ny] = 1;
-                        }
+                        continue;
+                    } 
+                    if (map[nx][ny] == target) {
+                        map[nx][ny] = -1;
+                        visited[nx][ny] = true;
                     }
                 }
             }
             
             // 삭제 가능한 노드 삭제
             // only 지게차
-            for (int i=0; i<n; ++i) {
-                for (int j=0; j<m; ++j) {
-                    if (deleted[i][j] == 1) map[i][j] = -1;
-                }
-            }
+            // for (int i=0; i<n; ++i) {
+            //     for (int j=0; j<m; ++j) {
+            //         if (deleted[i][j] == 1) map[i][j] = -1;
+            //     }
+            // }
         }
         // map에서 삭제 된 노드 제외하고 남아있는 노드 계산
         for (int i=0; i<n; ++i) {

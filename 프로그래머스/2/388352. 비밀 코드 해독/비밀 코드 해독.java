@@ -1,13 +1,15 @@
 import java.util.*;
 
 class Solution {
-    int[] code = new int[5]; // 비밀 코드
+    // q = 입력한 정수 배열
+    // ans = 몇개 일치하는지 응답 
+    int[] temp = new int[5];
     int answer;
+    int N;
     Set<Integer>[] set;
     public int solution(int n, int[][] q, int[] ans) {
-        // 1~n 
-        // m 번의 시도
-        // 정수 조합
+        N = n;
+        
         set = new HashSet[q.length];
         for (int i=0; i<q.length; ++i) {
             set[i] = new HashSet<>();
@@ -15,33 +17,33 @@ class Solution {
                 set[i].add(q[i][j]);
             }
         }
-        makeAnswer(0, 1, n, q, ans);
+        
+        backTracking(0, 1, q, ans);
         return answer;
     }
     
-    void makeAnswer(int cnt, int cur, int n, int[][] q, int[] ans) {
-        if (cnt == 5) {
+    void backTracking(int cur, int max, int[][] q, int[] ans) {
+        // 탈출 조건
+        if (cur == 5) {
             if (check(q, ans)) answer++;
             return;
         }
         
-        for (int i=cur; i<=n; ++i) {   
-            code[cnt] = i;
-            makeAnswer(cnt+1, i+1, n, q, ans);
+        for (int i=max; i<=N; ++i) {
+            temp[cur] = i;
+            backTracking(cur+1, i+1, q, ans);
         }
     }
     
-    boolean check(int[][] q, int[] answer) {
+    // q를 전체 다 돌면서 temp랑 q[i]랑 비교하면서 같은 갯수가 있으면 세고 그 센 것을 ans[i] 랑 비교해서 전부 맞으면 ans+1
+    boolean check(int[][] q, int[] ans) {
         for (int i=0; i<q.length; ++i) {
-            int total = 0;
-            
-            for (int now : code) {
-                if (set[i].contains(now)) total++;
+            int sum = 0;
+            for (int t : temp) {
+                if (set[i].contains(t)) sum++;
             }
-            
-            if (total != answer[i]) return false;
+            if (ans[i] != sum) return false;
         }
-        
         return true;
     }
 }

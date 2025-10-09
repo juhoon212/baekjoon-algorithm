@@ -1,44 +1,46 @@
 import java.util.*;
 
 class Solution {
-    // info[i][0] = A도둑 흔적
-    // info[i][1] = B도둑 흔적
-    // 흔적은 1이상 3이하
-    
-    // n개이상 이면 A도둑은 붙잡힘
-    // m개이상 이면 A도둑은 붙잡힘
-    // 이때 A도둑이 남긴 흔적의 개수의 최솟값을 구하면됨.
+    // A 도둑, B도둑 모두 흔적을 최소화해야 함.
+    // 물건 훔치는 조건은
+    // A도둑 흔적 info[i][0]
+    // B도둑 흔적 info[i][1]
+    // A도둑이 남긴 흔적의 누적 개수 최솟값 구해라
+    // 전에껄 참고해야되니 dp 문제
     public int solution(int[][] info, int n, int m) {
-        // 전에것을 계속 참고해야하므로 dp
-        int[][] dp = new int[info.length+1][m];
-        final int INF = 1000;
+        // B가 물건을 많이 훔칠수록 좋다.
+        // dp[][] 에서 첫번째 배열의 크기는 info의 index,
+        // 두번째 배열은 b가 훔친 물건의 갯수
+        // dp[][] = A가 훔친 물건의 최소 갯수
+        // 불확실 조건일때는 해당 칸을 INF로 명시
+        int INF = 10000;
         
-        for (int i=0; i<dp.length; ++i) Arrays.fill(dp[i], INF);
-        dp[0][0] = 0; // ?
+        int size = info.length+1;
+        int[][] dp = new int[size][m];
+        // dp 배열 초기화
+        for (int i=0; i<size; ++i) {
+            Arrays.fill(dp[i], INF);
+        }
+        dp[0][0] = 0;
         
-        // dp배열에 A의 최솟값을 계속 갱신해나가면서
-        // 마지막 dp[info.length-1] 에 도달했을 시 최솟값을 구하면됨.
-        // i는 index
-        // j는 B가 훔친 물건의 갯수 합
-        // dp[i][j] = A가 훔친 물건의 최소 수
-        for (int i=1; i<info.length+1; ++i) {
+        for (int i=1; i<size; ++i) {
             int a = info[i-1][0];
             int b = info[i-1][1];
             
             for (int j=0; j<m; ++j) {
-                // A에게 흔적을 준 경우
-                dp[i][j] = Math.min(dp[i][j], dp[i-1][j] + a);
-                // B에게 흔적을 준 경우
-                if (j + b < m) dp[i][j+b] = Math.min(dp[i-1][j], dp[i][j+b]);
-                System.out.println(dp[i][j] == INF ? "INF" : dp[i][j]);
+                // a가 훔쳤을 때
+                dp[i][j] = Math.min(dp[i-1][j] + a, dp[i][j]);
+                // b가 훔쳤을 때
+                if (j + b < m) {
+                    dp[i][j+b] = Math.min(dp[i][j+b], dp[i-1][j]);
+                }
             }
         }
         
-        int answer=10000;
+        int answer=INF;
         for (int i=0; i<m; ++i) {
-            answer = Math.min(answer, dp[info.length][i]);
+            answer = Math.min(answer, dp[size-1][i]);
         }
-        
         return answer >= n ? -1 : answer;
     }
 }

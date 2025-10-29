@@ -1,56 +1,58 @@
 import java.util.*;
 
 class Solution {
-    int[] discounts = new int[]{10, 20, 30, 40};
+    int[] discount = new int[]{10, 20, 30, 40};
     int[] temp;
     int[] answer = new int[2];
     
     public int[] solution(int[][] users, int[] emoticons) {
-        // 할인율은 10,20,30,40 으로 고정
-        // 조합 문제로 풀 수 있을 것 같다.
-        // 1. 이모티콘 플러스 가입자 최대
-        // 2. 금액 최대
-        
-        // 이모티콘 할인율 ^ 이모티콘 갯수 = 최대 4^7
-        // 이모티콘 각각마다 1번 이모티콘이 10퍼면, (10,10), (10,20) 이런식으로 계속 조합을 바꿔서
-        // 이모티콘 플러스를 제일 많이 가입할 수 있는 경우를 구해야 한다.
+        // 1. 이모티콘 플러스 서비스 가입자를 최대한 늘리는 것 (우선순위 높음)
+        // 2. 이모티콘 판매액을 늘리는것
+        // 3. 사용자의 비율이 할인율보다 낮거나 같으면 모두 구매
+        // 이 때 최대의 이모티콘 플러스 가입자 및 판매액을 구하라.
+        // 이 때 이모티콘마다 할인율은 다를 수 있으며, 할인율은 10, 20, 30, 40
+        // 조합으로 풀 수 있을듯.
         temp = new int[emoticons.length];
         dfs(0, users, emoticons);
+        
         return answer;
     }
     
     void dfs(int idx, int[][] users, int[] emoticons) {
-        // 탈출조건
+        // 탈출 조건
         if (idx == emoticons.length) {
-            calc(temp, users, emoticons);
+            calc(users, emoticons);
             return;
         }
-        for (int i=0; i<discounts.length; ++i) {
-            temp[idx] = discounts[i];
+        
+        // 이모티콘의 갯수만큼 돌린다.
+        for (int i=0; i<discount.length; ++i) {
+            temp[idx] = discount[i]; // [10, 10] , [10, 20]
             dfs(idx+1, users, emoticons);
         }
     }
-    // temp 배열이 0이 아닌수로 꽉찼을 때 ex) [10, 20] -> 
-    // 해당 비율을 가지고 users를 돌면서 기존 answer의 값보다 크다면 갱신한다.
-    void calc(int[] discountRate, int[][] users, int[] emoticons) {
-        int[] total= new int[2];
+    
+    // 여기서 각 할인율마다 이모티콘 플러스 가입자와 이모티콘 판매액을 구하고 answer 배열과 비교하여
+    // 값이 더 크다면 갱신한다.
+    void calc(int[][] users, int[] emoticons) {
+        int[] total = new int[2];
         for (int[] user : users) {
-            int targetRate = user[0];
-            int targetCost = user[1];
+            int userDiscount = user[0];
+            int userCost = user[1];
+            int curCost=0; // 유저별로 초기화 해야함.
             
-            // 이모티콘 갯수만큼 돌면서 할인된 금액의 합을 구한다.
-            int sumCost = 0;
             for (int i=0; i<emoticons.length; ++i) {
-                if (targetRate <= discountRate[i]) {
-                    sumCost += emoticons[i] * (100 - discountRate[i]) / 100;
+                if (temp[i] >= userDiscount) {
+                    curCost += emoticons[i] * (100 - temp[i]) / 100;
                 }
             }
             
-            if (sumCost >= targetCost) total[0] += 1; // 플러스 가입자 +1
-            else total[1] += sumCost;
+            // 유저 한명당 이모티콘 구매를 끝내면 할인된 비용이 유저의 비용보다 높다면 플러스 가입 +1
+            if (curCost >= userCost) total[0]++;
+            else total[1] += curCost;
         }
         
-        if (total[0] > answer[0] || (total[0] == answer[0] && total[1] > answer[1])) {
+        if (answer[0] < total[0] || (answer[0] == total[0] && answer[1] <= total[1])) {
             answer[0] = total[0];
             answer[1] = total[1];
         }

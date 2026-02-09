@@ -168,6 +168,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0011-container-with-most-water) |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0283-move-zeroes](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0283-move-zeroes) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1798-max-number-of-k-sum-pairs) |
@@ -177,6 +178,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
@@ -262,4 +264,8 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0017-letter-combinations-of-a-phone-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0216-combination-sum-iii](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0216-combination-sum-iii) |
 | [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
+## String Matching
+|  |
+| ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 <!---LeetCode Topics End-->

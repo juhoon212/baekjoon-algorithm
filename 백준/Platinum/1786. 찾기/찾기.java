@@ -11,7 +11,7 @@ class Main {
         List<Integer> pos = KMP(parent, pattern);
         System.out.println(count);
         
-        pos.stream().forEach(it -> System.out.print((it+1) + " "));
+        pos.stream().forEach(it -> System.out.print(it + " "));
     }
     
     static List<Integer> KMP(String parent, String pattern) {
@@ -27,7 +27,7 @@ class Main {
             if (parent.charAt(i) == pattern.charAt(j)) {
                 if (j == pattern.length()-1) {
                     count++;
-                    pos.add(i - pattern.length() + 1);
+                    pos.add(i - pattern.length() + 2);
                     j = failArr[j];
                 } else {
                     ++j;

@@ -4,22 +4,24 @@ class Solution {
     }
 
     int KMP(String parent, String pattern) {
-        int[] fail = makeFailArray(pattern);
+        int[] failArr = makeFailArray(pattern);
         int j=0;
 
         for (int i=0; i<parent.length(); ++i) {
             while (j>0 && parent.charAt(i) != pattern.charAt(j)) {
-                j = fail[j-1];                 
+                j = failArr[j-1];
             }
 
             if (parent.charAt(i) == pattern.charAt(j)) {
-                if (j == pattern.length() - 1) {
+                if (j == pattern.length()-1) {
+                    System.out.println("Find!! at: >> " + (i-pattern.length()+1));
                     return i - pattern.length() + 1;
                 } else {
-                    j++;
+                    ++j;
                 }
             }
         }
+
         return -1;
     }
 
@@ -32,6 +34,7 @@ class Solution {
                 j = failArr[j-1];
             }
 
+            // 같으면 failArr에 카운트 저장
             if (pattern.charAt(i) == pattern.charAt(j)) {
                 failArr[i] = ++j;
             }

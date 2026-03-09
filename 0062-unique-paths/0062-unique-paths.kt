@@ -1,22 +1,15 @@
 class Solution {
+    lateinit var memo: Array<IntArray>
     fun uniquePaths(m: Int, n: Int): Int {
-        val grid = Array(m) { IntArray(n) }
-        // 행: n
-        for (j in 0 until n) {
-            grid[0][j] = 1
-        }
-        
-        // 열: m
-        for (i in 0 until m) {
-            grid[i][0] = 1
-        }
+        memo = Array(m) { IntArray(n) { -1 } }
+        return dfs(m-1, n-1)
+    }
 
-        // DP
-        for (i: Int in 1 until m) {
-            for (j: Int in 1 until n) {
-                grid[i][j] = grid[i-1][j] + grid[i][j-1]
-            } 
-        }
-        return grid[m-1][n-1]
+    fun dfs(i: Int, j: Int): Int {
+        if (i == 0 || j == 0) return 1
+        if (memo[i][j] != -1) return memo[i][j]
+
+        memo[i][j] = dfs(i-1, j) + dfs(i, j-1)
+        return memo[i][j]
     }
 }

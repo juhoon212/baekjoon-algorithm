@@ -67,6 +67,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0300-longest-increasing-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
 | [0747-min-cost-climbing-stairs](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0747-min-cost-climbing-stairs) |
+| [1143-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1143-longest-common-subsequence) |
 | [1236-n-th-tribonacci-number](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1236-n-th-tribonacci-number) |
 | [1250-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1250-longest-common-subsequence) |
 ## Tree
@@ -183,6 +184,7 @@ This is a auto push repository for Baekjoon Online Judge created with [BaekjoonH
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0257-binary-tree-paths](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0257-binary-tree-paths) |
 | [0392-is-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/0392-is-subsequence) |
+| [1143-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1143-longest-common-subsequence) |
 | [1146-greatest-common-divisor-of-strings](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1146-greatest-common-divisor-of-strings) |
 | [1250-longest-common-subsequence](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1250-longest-common-subsequence) |
 | [1567-maximum-number-of-vowels-in-a-substring-of-given-length](https://github.com/juhoon212/baekjoon-algorithm/tree/master/1567-maximum-number-of-vowels-in-a-substring-of-given-length) |

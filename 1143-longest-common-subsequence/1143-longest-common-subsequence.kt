@@ -1,7 +1,8 @@
 class Solution {
     fun longestCommonSubsequence(text1: String, text2: String): Int {
-        val t1 = text1.length
-        val t2 = text2.length
+        val t1: Int = text1.length
+        val t2: Int = text2.length
+
         val dp: Array<Array<Int>> = Array(t1+1) { Array(t2+1) { 0 } }
 
         for (i: Int in t1-1 downTo 0) {

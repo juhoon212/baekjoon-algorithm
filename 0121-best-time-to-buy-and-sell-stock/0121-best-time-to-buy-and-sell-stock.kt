@@ -1,14 +1,10 @@
 class Solution {
     fun maxProfit(prices: IntArray): Int {
-        // init
-        var l: Int = 0
+        var buy: Int = 0
         var profit: Int = 0
-
-        for (r: Int in 1 until prices.size) {
-            if (l >= prices.size) break;
-            if (prices[l] < prices[r]) {
-                profit = maxOf(profit, prices[r] - prices[l])
-            } else l = r;
+        for (i: Int in 1 until prices.size) {
+            if (prices[i] < prices[buy]) buy = i
+            else profit = maxOf(profit, prices[i] - prices[buy])
         }
         return profit
     }

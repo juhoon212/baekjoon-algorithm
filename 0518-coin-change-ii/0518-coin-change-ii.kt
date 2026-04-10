@@ -1,22 +1,17 @@
 class Solution {
     fun change(amount: Int, coins: IntArray): Int {
-        val n: Int = coins.size
-        val dp: Array<IntArray> = Array(n+1) { IntArray(amount+1) { 0 } }
+        val dp: IntArray = IntArray(amount+1) { 0 }
+        var index: Int = 0
 
-        for (i: Int in 0 .. n) {
-            dp[i][0] = 1
-        }
-
-        for (i: Int in 1 .. n) {
-            for (j: Int in 1 .. amount) {
-                if (coins[i-1] <= j) {
-                    dp[i][j] = dp[i][j - coins[i-1]] + dp[i-1][j]
-                } else {
-                    dp[i][j] = dp[i-1][j]
+        dp[0] = 1
+        while (index < coins.size) {
+            for (i: Int in 1 .. amount) {
+                if (coins[index] <= i) {
+                    dp[i] += dp[i - coins[index]]
                 }
             }
+            index += 1
         }
-
-        return dp[n][amount]
+        return dp[amount]
     }
 }
